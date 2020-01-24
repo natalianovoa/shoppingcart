@@ -5,7 +5,10 @@ const App = () => {
   const products = Object.values(data);
   useEffect(() => {
     const fetchProducts = async () => {
-      const response = await fetch('./data/products.json');
+      const response = await fetch('/data/products.json');  
+      //if ! response.ok 
+        //console.log()
+        //response.status
       const json = await response.json();
       setData(json);
     };
@@ -14,6 +17,7 @@ const App = () => {
 
   return (
     <ul>
+      
       {products.map(product => <li key={product.sku}>{product.title}</li>)}
     </ul>
   );

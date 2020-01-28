@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from "react-dom";
 
 import "rbx/index.css";
-import { Card, Title, Content, Footer, Image, Column, Group, Button } from "rbx";
+import { Card, Title, Content, Footer, Image, Column, Group, Button, Label, Checkbox } from "rbx";
 import { Container, Col, Row} from 'react-bootstrap';
 
 
 const Product = ({product}) => {
       return (
-          <Column  size="one-quarter">
+          <Column  size="one-fifth">
             <Card size="15px">
             <Image.Container size="4by5"> <Card.Image textAlign="centered"> <img src={"data/products/" + product.sku + "_2.jpg"} width="50"
             height="28"/> 
@@ -30,7 +30,7 @@ const Product = ({product}) => {
 
                 <Card.Footer as="footer">
                     <Card.Footer.Item as="a">
-                        <Button color="primary">Add to Cart</Button>
+                        <Button color="primary"> Add to Cart </Button>
                     </Card.Footer.Item>
                 </Card.Footer>
             </Card>
